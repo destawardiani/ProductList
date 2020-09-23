@@ -7,7 +7,7 @@ import ProductList from './src/components/ProductList'
 class App extends Component {
   render() {
     return (
-      <View>
+      <View style={{ paddingBottom: 75 }}>
         <Header title="Product List" />
         <ProductList />
       </View>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, Linking } from 'react-native';
 import Card from './Card'
+import Button from './Button'
 import CardSection from './CardSection'
 
 
@@ -57,6 +58,11 @@ class ProductItem extends Component {
                 { this.getPriceFormatted(price) }
             </Text>
           </CardSection>  
+          <CardSection>
+            <Button onPress={ () => Linking.openURL('https://wa.me/6289677004847?text=Hai admin, saya tertarik dengan produk ' + name) }> 
+                Buy Now
+            </Button>
+          </CardSection>
         </Card>  
         );
       }
