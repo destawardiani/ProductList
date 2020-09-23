@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import axios from 'axios';
 
+import ProductItem from './ProductItem'
+
 class ProductList extends Component {
     state = { 
         products: []
@@ -20,9 +22,7 @@ class ProductList extends Component {
 
      renderProducts() {
         return this.state.products.map(product => 
-        <Text key={ product.id }>
-            { product.name }
-        </Text>
+            <ProductItem product={ product } key={ product.id } />
         )
     }
 
